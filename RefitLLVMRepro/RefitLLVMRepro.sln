@@ -1,0 +1,23 @@
+
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RefitLLVMRepro.iOS", "RefitLLVMRepro.iOS\RefitLLVMRepro.iOS.csproj", "{E7664212-3DA6-45D1-BE65-9778158AA7CE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RefitLLVMRepro", "RefitLLVMRepro\RefitLLVMRepro.csproj", "{1B53AD87-0709-45ED-A00B-1A1BC6DE6F25}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Release|iPhone = Release|iPhone
+		ReleaseLLVM|iPhone = ReleaseLLVM|iPhone
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{E7664212-3DA6-45D1-BE65-9778158AA7CE}.Release|iPhone.ActiveCfg = Release|iPhone
+		{E7664212-3DA6-45D1-BE65-9778158AA7CE}.Release|iPhone.Build.0 = Release|iPhone
+		{E7664212-3DA6-45D1-BE65-9778158AA7CE}.ReleaseLLVM|iPhone.ActiveCfg = ReleaseLLVM|iPhone
+		{E7664212-3DA6-45D1-BE65-9778158AA7CE}.ReleaseLLVM|iPhone.Build.0 = ReleaseLLVM|iPhone
+		{1B53AD87-0709-45ED-A00B-1A1BC6DE6F25}.Release|iPhone.ActiveCfg = Release|iPhone
+		{1B53AD87-0709-45ED-A00B-1A1BC6DE6F25}.Release|iPhone.Build.0 = Release|iPhone
+		{1B53AD87-0709-45ED-A00B-1A1BC6DE6F25}.ReleaseLLVM|iPhone.ActiveCfg = Release|iPhone
+		{1B53AD87-0709-45ED-A00B-1A1BC6DE6F25}.ReleaseLLVM|iPhone.Build.0 = Release|iPhone
+	EndGlobalSection
+EndGlobal
