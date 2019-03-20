@@ -26,13 +26,9 @@ namespace RefitLLVMRepro
 
             using (var response = await PundayWebsiteClient.SubmitAnswer(punNumber, new Dictionary<string, string> { { "answer", userAnswer } }).ConfigureAwait(false))
             {
-                //Device.BeginInvokeOnMainThread(async () => await Application.Current.MainPage.DisplayAlert("Response Status Code", response.StatusCode.ToString(), "Ok"));
-
                 if (response.IsSuccessStatusCode)
                 {
                     htmlContent = await response.Content.ReadAsStringAsync().ConfigureAwait(false);
-
-                    //Device.BeginInvokeOnMainThread(async () => await Application.Current.MainPage.DisplayAlert("HTML Content", htmlContent, "Ok"));
 
                     isInternetConnectionAvailable = true;
                 }

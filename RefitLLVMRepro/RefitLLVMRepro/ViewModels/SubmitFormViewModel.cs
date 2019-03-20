@@ -30,16 +30,16 @@ namespace RefitLLVMRepro
             const int punNumber = 321;
             const string wrongAnswer = "wrong answer";
 
-            bool isUserTextCorrect = false, isInternetConnectionAvailable = false;
+            bool isInternetConnectionAvailable = false;
 
             IsBusy = true;
 
             try
             {
                 if (shouldUseRefit)
-                    (isUserTextCorrect, isInternetConnectionAvailable) = await APIService.IsUserTextCorrect_IsInternetConnectionAvailable(punNumber, wrongAnswer);
+                    (_, isInternetConnectionAvailable) = await APIService.IsUserTextCorrect_IsInternetConnectionAvailable(punNumber, wrongAnswer);
                 else
-                    (isUserTextCorrect, isInternetConnectionAvailable) = await APIService.PostAsyncWithFormUrlEncodedContent(punNumber, wrongAnswer);
+                    (_, isInternetConnectionAvailable) = await APIService.PostAsyncWithFormUrlEncodedContent(punNumber, wrongAnswer);
             }
             catch (Exception e)
             {
@@ -51,9 +51,7 @@ namespace RefitLLVMRepro
             }
 
             if (!isInternetConnectionAvailable)
-                await Application.Current.MainPage.DisplayAlert("Failed to Connect", "", "Ok");
-            else if (isUserTextCorrect)
-                await Application.Current.MainPage.DisplayAlert("User Input Correct?", "", "Ok");
+                await Application.Current.MainPage.DisplayAlert("Failed", "", "Ok");
             else
                 await Application.Current.MainPage.DisplayAlert("Success!", "", "Ok");
         }
