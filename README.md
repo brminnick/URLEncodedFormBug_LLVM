@@ -4,7 +4,7 @@
 
 ### Working Example
 
-1. In the RefitLLVM solution folder, delete all `bin` folders and `obj` folders
+1. In the RefitLLVM solution folder, delete all `bin` folders and `obj` folders. I recommend using [this tool to clean the bin & obj folders](https://twitter.com/TheCodeTraveler/status/943920319919636481).
   - Delete `RefitLLVM\bin`
   - Delete `RefitLLVM\obj`
   - Delete `RefitLLVM.iOS\bin`
@@ -31,7 +31,7 @@
 
 ### Non-Working Example
 
-1. In the RefitLLVM solution folder, delete all `bin` folders and `obj` folders
+1. In the RefitLLVM solution folder, delete all `bin` folders and `obj` folders. I recommend using [this tool to clean the bin & obj folders](https://twitter.com/TheCodeTraveler/status/943920319919636481).
   - Delete `RefitLLVM\bin`
   - Delete `RefitLLVM\obj`
   - Delete `RefitLLVM.iOS\bin`
