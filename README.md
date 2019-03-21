@@ -2,40 +2,13 @@
 
 ## Reproduction Steps
 
-### Working Example
+### Failing/Non-Working Example
 
 1. In the RefitLLVM solution folder, delete all `bin` folders and `obj` folders. I recommend using [this tool to clean the bin & obj folders](https://twitter.com/TheCodeTraveler/status/943920319919636481).
-  - Delete `RefitLLVM\bin`
-  - Delete `RefitLLVM\obj`
-  - Delete `RefitLLVM.iOS\bin`
-  - Delete `RefitLLVM.iOS\obj`  
-
-
-2. Open the current [`Xamarin Preview` channel](https://user-images.githubusercontent.com/13558917/54733053-9f180b80-4b54-11e9-9768-9595742d34cc.png) of Visual Studio for Mac 2019 Preview as of 21 March 2019 @ 1530 UTC. 
-  	- [Environment Information Below](#environment)
-
-3. Open RefitLLVMRepro.sln 
-
-4. Set the Build Confguration to Release | iPhone
-
-5. Build Deploy app to an iOS device 
-  - Note: I am using an iPhone XS Max running iOS 12.1.4
-
-6. Tap the `Submit with Refit` Button
-
-7. Confirm `Success` Popup 
-
-8. Tap the `Submit without Refit` Button
-
-9. Confirm `Success` Popup
-
-### Non-Working Example
-
-1. In the RefitLLVM solution folder, delete all `bin` folders and `obj` folders. I recommend using [this tool to clean the bin & obj folders](https://twitter.com/TheCodeTraveler/status/943920319919636481).
-  - Delete `RefitLLVM\bin`
-  - Delete `RefitLLVM\obj`
-  - Delete `RefitLLVM.iOS\bin`
-  - Delete `RefitLLVM.iOS\obj`  
+	  - Delete `RefitLLVM\bin`
+	  - Delete `RefitLLVM\obj`
+	  - Delete `RefitLLVM.iOS\bin`
+	  - Delete `RefitLLVM.iOS\obj`  
 
 2. Open the current [`Xamarin Preview` channel](https://user-images.githubusercontent.com/13558917/54733053-9f180b80-4b54-11e9-9768-9595742d34cc.png) of Visual Studio for Mac 2019 Preview as of 21 March 2019 @ 1530 UTC. 
   	- [Environment Information Below](#environment)
@@ -55,6 +28,33 @@
 
 9. Confirm `Failed` Popup
 
+
+### Successful/Working Example
+
+1. In the RefitLLVM solution folder, delete all `bin` folders and `obj` folders. I recommend using [this tool to clean the bin & obj folders](https://twitter.com/TheCodeTraveler/status/943920319919636481).
+	  - Delete `RefitLLVM\bin`
+	  - Delete `RefitLLVM\obj`
+	  - Delete `RefitLLVM.iOS\bin`
+	  - Delete `RefitLLVM.iOS\obj`  
+
+
+2. Open the current [`Xamarin Preview` channel](https://user-images.githubusercontent.com/13558917/54733053-9f180b80-4b54-11e9-9768-9595742d34cc.png) of Visual Studio for Mac 2019 Preview as of 21 March 2019 @ 1530 UTC. 
+  	- [Environment Information Below](#environment)
+
+3. Open RefitLLVMRepro.sln 
+
+4. Set the Build Confguration to Release | iPhone
+
+5. Build Deploy app to an iOS device 
+  - Note: I am using an iPhone XS Max running iOS 12.1.4
+
+6. Tap the `Submit with Refit` Button
+
+7. Confirm `Success` Popup 
+
+8. Tap the `Submit without Refit` Button
+
+9. Confirm `Success` Popup
 
 ## Environment
 
