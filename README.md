@@ -11,7 +11,7 @@
   - Delete `RefitLLVM.iOS\obj`  
 
 
-2. Open the current [`Xamarin Preview` channel](https://user-images.githubusercontent.com/13558917/54733053-9f180b80-4b54-11e9-9768-9595742d34cc.png) of Visual Studio for Mac 2019 Preview as of 20 March 2019 @ 2340 UTC. 
+2. Open the current [`Xamarin Preview` channel](https://user-images.githubusercontent.com/13558917/54733053-9f180b80-4b54-11e9-9768-9595742d34cc.png) of Visual Studio for Mac 2019 Preview as of 21 March 2019 @ 1530 UTC. 
   	- [Environment Information Below](#environment)
 
 3. Open RefitLLVMRepro.sln 
@@ -37,7 +37,7 @@
   - Delete `RefitLLVM.iOS\bin`
   - Delete `RefitLLVM.iOS\obj`  
 
-2. Open the current [`Xamarin Preview` channel](https://user-images.githubusercontent.com/13558917/54733053-9f180b80-4b54-11e9-9768-9595742d34cc.png) of Visual Studio for Mac 2019 Preview as of 20 March 2019 @ 2340 UTC. 
+2. Open the current [`Xamarin Preview` channel](https://user-images.githubusercontent.com/13558917/54733053-9f180b80-4b54-11e9-9768-9595742d34cc.png) of Visual Studio for Mac 2019 Preview as of 21 March 2019 @ 1530 UTC. 
   	- [Environment Information Below](#environment)
 
 3. Open RefitLLVMRepro.sln 
@@ -60,22 +60,22 @@
 
 === Visual Studio Enterprise 2019 Preview for Mac ===
 
-Version 8.0 Preview (8.0 build 2624)
-Installation UUID: 593b6418-ef91-43cc-bfe8-8956e458f4b3
+Version 8.0 Preview (8.0 build 2931)
+Installation UUID: 1bb450c4-ab99-4090-a394-376e50e3970f
 	GTK+ 2.24.23 (Raleigh theme)
 	Xamarin.Mac 5.6.0.2 (d16-0 / 040682909)
 
-	Package version: 518010000
+	Package version: 518010003
 
 === Mono Framework MDK ===
 
 Runtime:
-	Mono 5.18.1.0 (2018-08/9cb3348c311) (64-bit)
-	Package version: 518010000
+	Mono 5.18.1.3 (2018-08/fdb26b0a445) (64-bit)
+	Package version: 518010003
 
 === NuGet ===
 
-Version: 4.8.0.5385
+Version: 4.8.2.5835
 
 === .NET Core ===
 
@@ -86,6 +86,7 @@ Runtime Versions:
 	3.0.0-preview-27122-01
 	2.2.0
 	2.2.0-preview3-27014-02
+	2.1.9
 	2.1.8
 	2.1.6
 	2.1.2
@@ -101,6 +102,7 @@ SDK Versions:
 	3.0.100-preview-009812
 	2.2.100
 	2.2.100-preview3-009430
+	2.1.505
 	2.1.504
 	2.1.500
 	2.1.302
@@ -119,13 +121,6 @@ Location: /Applications/Xamarin Profiler.app/Contents/MacOS/Xamarin Profiler
 
 Version: 11
 
-=== Xamarin Designer ===
-
-Version: 4.17.4.366
-Hash: b4b7c658d
-Branch: remotes/origin/d16-0
-Build date: 2019-02-18 13:35:26 UTC
-
 === Apple Developer Tools ===
 
 Xcode 10.1 (14460.46)
@@ -133,21 +128,28 @@ Build 10B61
 
 === Xamarin.Mac ===
 
-Version: 5.6.0.23 (Visual Studio Enterprise)
-Hash: ad57f877
+Version: 5.6.0.25 (Visual Studio Enterprise)
+Hash: 50f75273
 Branch: d16-0
-Build date: 2019-02-12 15:19:51-0500
+Build date: 2019-03-05 11:50:33-0800
 
 === Xamarin.iOS ===
 
-Version: 12.6.0.23 (Visual Studio Enterprise)
-Hash: ad57f877
+Version: 12.6.0.25 (Visual Studio Enterprise)
+Hash: 50f75273
 Branch: d16-0
-Build date: 2019-02-12 15:19:50-0500
+Build date: 2019-03-05 11:50:33-0800
+
+=== Xamarin Designer ===
+
+Version: 4.17.4.407
+Hash: 2897b5f8c
+Branch: remotes/origin/d16-0
+Build date: 2019-03-15 18:29:24 UTC
 
 === Xamarin.Android ===
 
-Version: 9.2.0.3 (Visual Studio Enterprise)
+Version: 9.2.0.5 (Visual Studio Enterprise)
 Android SDK: /Users/bramin/Library/Android/sdk
 	Supported Android versions:
 		6.0 (API level 23)
@@ -179,10 +181,10 @@ https://github.com/xamarin/AndroidDesigner.EPL
 
 === Android Device Manager ===
 
-Version: 1.2.0.13
-Hash: ec487ee
+Version: 1.2.0.14
+Hash: 86df26f
 Branch: remotes/origin/d16-0
-Build date: 2019-02-28 22:03:50 UTC
+Build date: 2019-03-15 21:58:58 UTC
 
 === Xamarin Inspector ===
 
@@ -194,11 +196,11 @@ Client compatibility: 1
 
 === Build Information ===
 
-Release ID: 800002624
-Git revision: 2efed6c01e4a62b8adc3b048a68f792390c894a0
-Build date: 2019-03-04 18:20:21+00
+Release ID: 800002931
+Git revision: 36acb974fd4576544398d2eba261d6416b309fa6
+Build date: 2019-03-19 01:19:42+00
 Build branch: master
-Xamarin extensions: 6457d5033f37b53ae852bd388eed15a30c8e86eb
+Xamarin extensions: 4fb9d9fd52d8b071a61f6062d07b60c54e1c5af3
 
 === Operating System ===
 
