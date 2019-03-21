@@ -27,19 +27,21 @@ namespace RefitLLVMRepro
         #region Methods
         async Task ExecuteSubmitButtonCommand(bool shouldUseRefit)
         {
-            const int punNumber = 321;
-            const string wrongAnswer = "wrong answer";
-
-            bool isInternetConnectionAvailable = false;
+            var isPostSuccessful = false;
 
             IsBusy = true;
 
             try
             {
                 if (shouldUseRefit)
-                    (_, isInternetConnectionAvailable) = await APIService.IsUserTextCorrect_IsInternetConnectionAvailable(punNumber, wrongAnswer);
+                    isPostSuccessful = await APIService.IsPostSuccessful_Refit();
                 else
-                    (_, isInternetConnectionAvailable) = await APIService.PostAsyncWithFormUrlEncodedContent(punNumber, wrongAnswer);
+                    isPostSuccessful = await APIService.IsPostSuccessful();
+
+                if (isPostSuccessful)
+                    await Application.Current.MainPage.DisplayAlert("Success!", "", "Ok");
+                else
+                    await Application.Current.MainPage.DisplayAlert("Failed", "", "Ok");
             }
             catch (Exception e)
             {
@@ -49,11 +51,6 @@ namespace RefitLLVMRepro
             {
                 IsBusy = false;
             }
-
-            if (!isInternetConnectionAvailable)
-                await Application.Current.MainPage.DisplayAlert("Failed", "", "Ok");
-            else
-                await Application.Current.MainPage.DisplayAlert("Success!", "", "Ok");
         }
         #endregion
     }

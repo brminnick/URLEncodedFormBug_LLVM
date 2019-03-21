@@ -9,44 +9,31 @@ namespace RefitLLVMRepro
 {
     public static class APIService
     {
+        const string _url = "https://mondaypunday.com/";
+        const int _punNumber = 321;
+        const string _answer = "answer";
+
         readonly static Lazy<HttpClient> _clientHolder = new Lazy<HttpClient>(() => new HttpClient());
 
         readonly static Lazy<IPundayWebsiteAPI> _pundayWebsiteClientHolder = new Lazy<IPundayWebsiteAPI>(() =>
-            RestService.For<IPundayWebsiteAPI>(new HttpClient { BaseAddress = new Uri("https://mondaypunday.com") }));
+            RestService.For<IPundayWebsiteAPI>(new HttpClient { BaseAddress = new Uri(_url) }));
 
         static IPundayWebsiteAPI PundayWebsiteClient => _pundayWebsiteClientHolder.Value;
         static HttpClient Client => _clientHolder.Value;
 
-        public static async Task<(bool isUserTextCorrect, bool isInternetConnectionAvailable)> IsUserTextCorrect_IsInternetConnectionAvailable(int punNumber, string userAnswer)
+        public static async Task<bool> IsPostSuccessful_Refit()
         {
-            var isUserTextCorrect = false;
-            var isInternetConnectionAvailable = false;
-
-            string htmlContent = "";
-
-            using (var response = await PundayWebsiteClient.SubmitAnswer(punNumber, new Dictionary<string, string> { { "answer", userAnswer } }).ConfigureAwait(false))
+            using (var response = await PundayWebsiteClient.SubmitAnswer(_punNumber, new Dictionary<string, string> { { _answer, _answer } }).ConfigureAwait(false))
             {
-                if (response.IsSuccessStatusCode)
-                {
-                    htmlContent = await response.Content.ReadAsStringAsync().ConfigureAwait(false);
-
-                    isInternetConnectionAvailable = true;
-                }
+                return response.IsSuccessStatusCode;
             }
-
-            isUserTextCorrect |= htmlContent.Contains("Correct!");
-
-            return (isUserTextCorrect, isInternetConnectionAvailable);
         }
 
-        public static async Task<(bool isUserTextCorrect, bool isInternetConnectionAvailable)> PostAsyncWithFormUrlEncodedContent(int punNumber, string answer)
+        public static async Task<bool> IsPostSuccessful()
         {
-            var url = $"https://mondaypunday.com/{punNumber}";
+            var url = $"{_url}{_punNumber}";
 
-            var isUserTextCorrect = false;
-            var isInternetConnectionAvailable = false;
-
-            var answerList = new List<KeyValuePair<string, string>> { new KeyValuePair<string, string>("answer", answer) };
+            var answerList = new List<KeyValuePair<string, string>> { new KeyValuePair<string, string>(_answer, _answer) };
 
             using (var httpContent = new FormUrlEncodedContent(answerList))
             {
@@ -54,17 +41,9 @@ namespace RefitLLVMRepro
 
                 using (var response = await Client.PostAsync(url, httpContent))
                 {
-                    if (response.IsSuccessStatusCode)
-                    {
-                        htmlContent = await response.Content.ReadAsStringAsync();
-                        isInternetConnectionAvailable = true;
-                    }
+                    return response.IsSuccessStatusCode;
                 }
-
-                isUserTextCorrect |= htmlContent.Contains("Correct!");
             }
-
-            return (isUserTextCorrect, isInternetConnectionAvailable);
         }
     }
 }
