@@ -34,9 +34,9 @@ namespace RefitLLVMRepro
             try
             {
                 if (shouldUseRefit)
-                    isPostSuccessful = await APIService.IsPostSuccessful_Refit();
+                    (_, isPostSuccessful) = await APIService.PostRequestWithFormUrlEncodedContent_Refit();
                 else
-                    isPostSuccessful = await APIService.IsPostSuccessful();
+                    (_, isPostSuccessful) = await APIService.PostRequestWithFormUrlEncodedContent();
 
                 if (isPostSuccessful)
                     await Application.Current.MainPage.DisplayAlert("Success!", "", "Ok");
