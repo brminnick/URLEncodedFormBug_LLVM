@@ -11,7 +11,7 @@
   - Delete `RefitLLVM.iOS\obj`  
 
 
-2. Open the current [`Xamarin Preview` channel](https://user-images.githubusercontent.com/13558917/54726657-4b47fb00-4b31-11e9-909d-080a691478da.png) of Visual Studio for Mac 2019 Preview as of 20 March 2019 @ 2340 UTC. 
+2. Open the current [`Xamarin Preview` channel](https://user-images.githubusercontent.com/13558917/54733053-9f180b80-4b54-11e9-9768-9595742d34cc.png) of Visual Studio for Mac 2019 Preview as of 20 March 2019 @ 2340 UTC. 
   	- [Environment Information Below](#environment)
 
 3. Open RefitLLVMRepro.sln 
@@ -37,7 +37,7 @@
   - Delete `RefitLLVM.iOS\bin`
   - Delete `RefitLLVM.iOS\obj`  
 
-2. Open the current [`Xamarin Preview` channel](https://user-images.githubusercontent.com/13558917/54726657-4b47fb00-4b31-11e9-909d-080a691478da.png) of Visual Studio for Mac 2019 Preview as of 20 March 2019 @ 2340 UTC. 
+2. Open the current [`Xamarin Preview` channel](https://user-images.githubusercontent.com/13558917/54733053-9f180b80-4b54-11e9-9768-9595742d34cc.png) of Visual Studio for Mac 2019 Preview as of 20 March 2019 @ 2340 UTC. 
   	- [Environment Information Below](#environment)
 
 3. Open RefitLLVMRepro.sln 
